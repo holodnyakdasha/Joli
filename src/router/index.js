@@ -28,11 +28,12 @@ const routes = [{
     {
         path: '/profile',
         component: Profile,
-        name: 'profile',
-        props: true,
-        children: [
-            { path: 'resume', name: 'resume', component: Resume }
-        ]
+        name: 'profile'
+    },
+    {
+        path: '/profile/resume',
+        component: Resume,
+        name: 'resume'
     }
 ]
 
