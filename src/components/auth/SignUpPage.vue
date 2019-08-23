@@ -9,7 +9,7 @@
               <v-card-title class="justify-center signUp">Sign Up</v-card-title>
             <v-row class="btn-container">
               <v-btn color="blue" class="btn-facebook btn-social"><v-icon>mdi-facebook</v-icon>Sign Up with Facebook</v-btn>
-              <v-btn class="btn-google btn-social"><v-icon color="orange">mdi-google</v-icon>Sign Up with Google</v-btn>
+              <v-btn class="btn-google btn-social"><v-icon color="red">mdi-google</v-icon>Sign Up with Google</v-btn>
               </v-row>
             <v-divider horizontal>OR</v-divider>
             <v-row class="inputs-container">
@@ -65,6 +65,9 @@
   font-size: 10px !important
 .signUp-img
   border-radius: 0 5px 5px 0
+@media only screen and (max-width: 740px)
+  .signUp-img
+    display: none
 .links
   text-decoration: none
   color: #0C0D10 !important
@@ -90,5 +93,5 @@
   font-weight: bold
 .v-btn > .v-btn__content .v-icon
     font-size: 20px !important
-    margin: 0 2px
+    margin: 0 5px
 </style>

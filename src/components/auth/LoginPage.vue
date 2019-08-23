@@ -9,7 +9,7 @@
               <v-card-title class="justify-center login">Login now</v-card-title>
             <v-row class="btn-container">
               <v-btn color="blue" class="btn-facebook btn-social"><v-icon>mdi-facebook</v-icon>Login with Facebook</v-btn>
-              <v-btn class="btn-google btn-social"><v-icon color="orange">mdi-google</v-icon>Login with Google</v-btn>
+              <v-btn class="btn-google btn-social"><v-icon color="red">mdi-google</v-icon>Login with Google</v-btn>
               </v-row>
             <v-divider horizontal>OR</v-divider>
             <v-row class="inputs-container">
@@ -28,16 +28,16 @@
             <router-link :to="{ name: 'reset' }" class="links">Forgot Password?</router-link>
             <router-link :to="{ name: 'signup' }" class="links">Do not have an account?</router-link>
             </v-layout>
-            <v-row><v-btn color="green" class="btn-login">Login</v-btn></v-row>
+            <v-row><v-btn color="green" class="btn-login"><router-link :to="{ name: 'profile'}">Login</router-link></v-btn></v-row>
             </v-col>
             <v-col class="shrink pt-0 pb-0">
-        <v-img
-          height="500"
-          width="150"
-          src="../../assets/login.jpg"
-          class="login-img"
-        ></v-img>
-      </v-col>
+              <v-img
+                height="500"
+                width="150"
+                src="../../assets/login.jpg"
+                class="login-img">
+              </v-img>
+            </v-col>
           </v-row>
         </v-container>
   </v-card>
@@ -68,7 +68,7 @@
   margin: 0 auto
   font-weight: bold
 .inputs-container
-  with: 400px
+  with: 100%
   height: 120px
   display: flex
   justify-content: center
@@ -86,5 +86,10 @@
   font-weight: bold
 .v-btn > .v-btn__content .v-icon
     font-size: 20px !important
-    margin: 0 2px
+    margin: 0 5px
+@media only screen and (max-width: 740px)
+  .login-img
+    display: none
+.btn-login a
+  color: white !important
 </style>

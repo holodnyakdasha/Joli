@@ -6,16 +6,16 @@
         <v-container class="pa-0">
           <v-row class= "pl-6">
             <v-col>
-              <v-card-title class="justify-center login">FORGOT PASSWORD</v-card-title>
+              <v-card-title class="justify-center reset">FORGOT PASSWORD</v-card-title>
               <v-card-text>{{ text }}</v-card-text>
             <v-row class="inputs-container">
                 <v-text-field
                   label="Email"
                   solo
-                  class="login-input"
+                  class="reset-input"
                 />
             </v-row>
-            <v-row><v-btn color="red" class="btn-login">Login</v-btn></v-row>
+            <v-row><v-btn color="red" class="btn-reset">Reset</v-btn></v-row>
             <v-layout>
             <router-link :to="{ name: 'login' }" class="links">Go back to Login</router-link>
             </v-layout>
@@ -25,7 +25,7 @@
           height="500"
           width="150"
           src="../../assets/login.jpg"
-          class="login-img"
+          class="reset-img"
         ></v-img>
       </v-col>
           </v-row>
@@ -52,8 +52,10 @@ export default {
     text-align: center
     color: gray
 
-.login-img
+.reset-img
   border-radius: 0 5px 5px 0
+  @media only screen and (max-width: 740px)
+    display: none
 .links
   text-decoration: none
   color: black !important
@@ -66,15 +68,15 @@ export default {
   display: flex
   justify-content: center
   margin: 1rem 0 0
-.login-input
+.reset-input
   width: 80%
   height: 20px !important
   flex: 0 auto !important
-.btn-login
+.btn-reset
   width: 30%
   color: #fff !important
   margin: 1rem auto
-.login
+.reset
   font-weight: bold
 .v-btn > .v-btn__content .v-icon
     font-size: 20px !important
