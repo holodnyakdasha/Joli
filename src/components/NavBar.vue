@@ -13,7 +13,7 @@
       class="btn-login"
       color="white"
       >
-        Login
+      <router-link :to="{ name: 'login' }">Login</router-link>
       </v-btn>
 
     <v-btn 
@@ -41,4 +41,7 @@ export default {
 .btn-post
     background-color: red
     margin-left: 10px
+a
+  text-decoration: none
+  color: black !important
 </style>
