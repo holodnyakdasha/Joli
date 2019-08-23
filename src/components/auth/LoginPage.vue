@@ -1,16 +1,17 @@
 <template>
     <v-card
-    max-width="900"
+    width="70%"
+    height = '500px'
     class="mx-auto">
         <v-container class="pa-0">
           <v-row class= "pl-6">
             <v-col>
-              <v-card-title class="justify-center">Login now</v-card-title>
+              <v-card-title class="justify-center login">Login now</v-card-title>
             <v-row class="btn-container">
-              <v-btn color="blue" class="btn-facebook btn-social">Login with Facebook</v-btn>
-              <v-btn class="btn-google btn-social">Login with Google</v-btn>
+              <v-btn color="blue" class="btn-facebook btn-social"><v-icon>mdi-facebook</v-icon>Login with Facebook</v-btn>
+              <v-btn class="btn-google btn-social"><v-icon color="orange">mdi-google</v-icon>Login with Google</v-btn>
               </v-row>
-            <v-divider horizontal></v-divider>
+            <v-divider horizontal>OR</v-divider>
             <v-row class="inputs-container">
                 <v-text-field
                   label="Email"
@@ -23,13 +24,15 @@
                   class="login-input"
                 />
             </v-row>
-            <router-link to="{name: 'reset'}" class="links">Forgot Password?</router-link>
-            <router-link to="{name: 'register'}" class="links">Do not have an account?</router-link>
+            <v-layout>
+            <router-link :to="{ name: 'reset' }" class="links">Forgot Password?</router-link>
+            <router-link :to="{ name: 'signup' }" class="links">Do not have an account?</router-link>
+            </v-layout>
             <v-row><v-btn color="green" class="btn-login">Login</v-btn></v-row>
             </v-col>
             <v-col class="shrink pt-0 pb-0">
         <v-img
-          height="520"
+          height="500"
           width="150"
           src="../../assets/login.jpg"
           class="login-img"
@@ -62,23 +65,26 @@
   text-decoration: none
   color: #0C0D10 !important
   font-size: 14px
-  padding: 0 10px
+  margin: 0 auto
   font-weight: bold
-  
-.auth-wrapper
-  margin-top: 5rem
-  width: 600px
 .inputs-container
-  with: 500px
+  with: 400px
+  height: 120px
   display: flex
   justify-content: center
-  margin: 1rem 0
-
+  margin: 2rem 0 1rem
+.inputs-container
 .login-input
-  width: 100% !important
+  width: 80%
+  height: 20px !important
   flex: 0 auto !important
 .btn-login
-  width: 50%
+  width: 30%
   color: #fff !important
-  margin: 1rem auto
+  margin: 1.5rem auto
+.login
+  font-weight: bold
+.v-btn > .v-btn__content .v-icon
+    font-size: 20px !important
+    margin: 0 2px
 </style>

@@ -29,7 +29,7 @@ export default {
 
 <style lang='sass'>
 .auth-wrapper
-  width: 505px
+  width: 900px
   margin: 2rem auto
   @media only screen and (max-width: 600px)
     width: 100%
